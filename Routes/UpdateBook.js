@@ -3,36 +3,43 @@ import Book from "../Models/Book.js";
 async function UpdateBook(req,res){
     let book;
     const BookId = req.params.BookId.toString()
+    if(BookId.length < 24){
+        return res.status(400).json({error:"ID must be 24 characters long"})
+    }
 
-    const title = req.body.title ? req.body.title : undefined;
-    const author = req.body.author ? req.body.author : undefined;
-    const description = req.body.description ? req.body.description : undefined;
-    const price = req.body.price ? req.body.price : undefined;
-    const available = req.body.available ? req.body.available : undefined;
-    const genre = req.body.genre ? req.body.genre : undefined;
+    const { title, author, description, available, genre } = req.body;
+    const price = req.body.price ? req.body.price.toFixed(2) : undefined;
+    let qualities = {
+        title:title,
+        author:author,
+        description:description,
+        price:price,
+        available:available,
+        genre:genre
+    }
+    
+    let updates = {}
+    Object.keys(qualities).forEach(key => {
+        if(qualities[key] != undefined){
+            updates[key] = qualities[key]
+        }
+    });
 
     try {
-        book = new Book({
-            title,
-            author,
-            description,
-            price,
-            available,
-            genre
-        })
-        await book.save()
+        book = await Book.findByIdAndUpdate(
+            BookId,
+            updates
+        )
+        book = await book.save()
     } catch(error){
         console.log(error);
     }
-
-    if(!book){
-        return res.status(500).json({message:"Unable to Add"})
+    finally{
+        if(!book){
+            return res.status(500).json({error:"Unable to Update"})
+        }
+        return res.status(201).json({message: "Successfully Updated"})
     }
-    var response = {
-        id:book._id,
-        title:book.title
-    }
-    return res.status(201).json(response)
 }
 
 export{

@@ -11,7 +11,7 @@ async function GetBooks(req,res,next){
     }
     
     if (!books){
-        return res.status(404).json({message:"Book Not Found"})
+        return res.status(404).json({error:"Book Not Found"})
     }
 
     return res.status(200).json({
