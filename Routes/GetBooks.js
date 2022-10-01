@@ -16,7 +16,7 @@ async function GetBooks(req,res,next){
 
     return res.status(200).json({
        message:"Books Found",
-       body:{books:books}
+       body:books
     })
 }
 

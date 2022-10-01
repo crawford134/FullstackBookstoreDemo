@@ -1,12 +1,14 @@
 import Book from "../Models/Book.js";
 
-async function CreateBook(req,res){
+async function UpdateBook(req,res){
     let book;
-    const { title, author, description, price } = req.body;
-    const available = (req.body.available===undefined) ? undefined : req.body.available;
-    if(!title || !author || !description || !price || available===undefined){
-        return res.status(400).json({message:"Missing Required Field"})   
-    }
+    const BookId = req.params.BookId.toString()
+
+    const title = req.body.title ? req.body.title : undefined;
+    const author = req.body.author ? req.body.author : undefined;
+    const description = req.body.description ? req.body.description : undefined;
+    const price = req.body.price ? req.body.price : undefined;
+    const available = req.body.available ? req.body.available : undefined;
     const genre = req.body.genre ? req.body.genre : undefined;
 
     try {
@@ -34,5 +36,5 @@ async function CreateBook(req,res){
 }
 
 export{
-    CreateBook
+    UpdateBook
 }
