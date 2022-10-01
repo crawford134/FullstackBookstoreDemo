@@ -1,4 +1,4 @@
-import Book from "../Models/Book.js";
+import Book from "../../Models/Book.js";
 
 async function UpdateBook(req,res){
     let book;
