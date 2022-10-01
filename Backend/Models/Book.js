@@ -18,9 +18,17 @@ const bookSchema = new Schema({
         type: Number,
         required: true, 
     },
+    image: {
+        type: String,
+        required: true
+    },
     available: {
         type: Boolean,
         required: true, 
+    },
+    ISBN: {
+        type: Number, 
+        required: false,
     },
     genre: {
         type: String,
