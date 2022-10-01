@@ -13,11 +13,11 @@ function startMiddleWare(app){
     var urlencodedParser = bodyParser.urlencoded({ extended: false })  
     app.use(express.static('public')); 
     //Routes 
-    app.get("/books/:BookId",(req,res,next)=>GetBookbyId(req,res,next));
     app.get("/books",(req,res)=>GetBooks(req,res));
     app.post("/books",urlencodedParser,(req,res)=>CreateBook(req,res));
+    app.get("/books/:BookId",(req,res,next)=>GetBookbyId(req,res,next));
     app.put("/books/:BookId",urlencodedParser,(req,res)=>UpdateBook(req,res));
-    app.delete("books/:BookId",(req,res)=>DeleteBook(req,res));
+    app.delete("/books/:BookId",(req,res)=>DeleteBook(req,res));
     app.get('/',(req,res,next) => GetHealth(req,res,next))
 }
 
