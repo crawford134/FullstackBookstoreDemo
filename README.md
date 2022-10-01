@@ -12,3 +12,12 @@ Uses Mongodb, NodeJs, ExpressJs, and ReactJs
 - Frontend: Uses the following Libraries: 
     1. React Router DOM is used to navigate between the pages of our application. It creates some routes and renders different components based on the route/endpoints. It also provides the link components that allow navigation between different routes/endpoints without reloading any pages
     2. MaterialUI Icons is ReactJs's predefined component library containing usable predefined components 
+
+## How to Start Application 
+```
+cd Backend 
+npm install 
+npm run start 
+
+cd Frontend
+```
