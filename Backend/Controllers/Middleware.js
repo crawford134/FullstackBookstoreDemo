@@ -1,5 +1,6 @@
 import express from "express"
 import bodyParser from "body-parser";
+import cors from "cors";
 import { GetHealth } from "../Routes/GetHealth.js"
 import { GetBooks } from "../Routes/BookRoutes/GetBooks.js";
 import { GetBookbyId } from "../Routes/BookRoutes/GetBookbyId.js";
@@ -10,6 +11,7 @@ import { UpdateBook } from "../Routes/BookRoutes/UpdateBook.js";
 function startMiddleWare(app){
     app.use(express.json());
     app.use(express.text());
+    app.use(cors());
     var urlencodedParser = bodyParser.urlencoded({ extended: false })  
     app.use(express.static('public')); 
     //Routes 
