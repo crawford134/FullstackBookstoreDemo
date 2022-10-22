@@ -20,10 +20,10 @@ Uses Mongodb, NodeJs, ExpressJs, and ReactJs
 cd Backend 
 npm install (if first time running) 
 npm run start 
-``
+```
 Runs on http://localhost:5001/
 
-``
+```
 cd Frontend
 npm install (if first time running)
 npm start
