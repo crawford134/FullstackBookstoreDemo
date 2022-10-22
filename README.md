@@ -15,11 +15,17 @@ Uses Mongodb, NodeJs, ExpressJs, and ReactJs
     ```https://mui.com/material-ui/material-icons/?query=library```
 
 ## How to Start Application 
+
 ```
 cd Backend 
-npm install 
+npm install (if first time running) 
 npm run start 
+```
+Runs on http://localhost:5001/
 
+```
 cd Frontend
+npm install (if first time running)
 npm start
 ```
+Runs on http://localhost:3000/
