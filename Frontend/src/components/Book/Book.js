@@ -2,25 +2,24 @@ import { Button } from '@mui/material'
 import React from 'react'
 
 export default function Book(book){
-  console.log("CurrentBook: ",book)
   const {title,author,available,description,genre,price,ISBN,image} = book.book
-  console.log("Available: ",available)
-  console.log("Genre: ",genre)
   if(available){
     return(
-      <div>
-        <h1>{title}</h1>
-        <img src={image} alt={title} />
-        <article>By {author}</article>
-        <h3>{description}</h3>
-        <h3>${price} CAD</h3>
-        <h4>{ISBN}</h4>
-        <Button sx={{backgroundColor: '#232F3D',color:'white',margin:'5px',marginLeft:'0px'}}>Purchase</Button>
-        <Button sx={{backgroundColor: '#232F3D',color:'white'}}>Edit</Button>
+      <div className='book'>
+        <li className='card'>
+          <h1>{title}</h1>
+          <img src={image} alt={title} />
+          <article>By {author}</article>
+          <p>{description}</p>
+          <div className='cardtext'><b>Genre:</b> {genre}</div>
+          <div className='cardtext'><b>ISBN:</b> {ISBN}</div>
+          <div className='cardbutton'>
+            <Button sx={{backgroundColor: '#232F3D',color:'white',marginTop:'10px', marginRight: '5px',marginBottom:'5px',marginLeft:'0px'}}>${price} CAD</Button>
+            <Button sx={{backgroundColor: '#232F3D',color:'white',marginTop:'10px', marginRight: '5px',marginBottom:'5px',marginLeft:'0px'}}>Edit</Button>
+          </div>
+        </li>
       </div>
     )} 
   else {
-    return(
-      <div></div>
-  )}
+    return}
 }

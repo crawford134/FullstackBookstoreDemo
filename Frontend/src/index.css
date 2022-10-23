@@ -12,16 +12,73 @@
     font-weight: 300px !important;;
 }
 
-.HeaderIcon{
-
-}
-
 .HeaderTabGroup{
     margin-left: 10px;
 }
 
-.HeaderTab{
+.ulbook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
 }
 
-.HeaderTab:hover{
+.book{
+    margin-right: .5rem;
+    margin-left: 2.5rem;
+    margin-bottom: 2em;
+    padding: 10px 25px 10px 0px;
+    width: 275px;
+    max-width: 300px;
+    max-height: 425px;
+}
+
+.card{
+    background-color: rgb(238, 238, 238);
+    padding: 1rem;
+    height: 100%;
+    max-height: 425px;
+    width: 100%;
+    box-shadow: 5px 5px 10px #717171; /* Across, Down, Blur, Colour */
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card > h1 {
+    font-size: 95%;
+}
+
+.card > img {
+    width: 50%;
+}
+
+.card > p {
+    margin: 10px 0px 0px 0px; /* Top, R, B, L */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 70px;
+    overflow: hidden;
+    color: #616161
+}
+
+.cardtext{
+    margin: 10px 0px 0px 0px; /* Top, R, B, L */
+    height: 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+    color: #616161
+}
+
+.cardbutton{
+    flex-direction: row;
 }

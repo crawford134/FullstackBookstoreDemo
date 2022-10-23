@@ -19,12 +19,12 @@ export default function Books() {
   //console.log("Books",books)
 
   return (
-    <div>
+    <ul className='ulbook'>
       {books && books.map((book,i) => (
         <div key={i}>
           <Book book={book}/>
         </div>
       ))}
-    </div>
+    </ul>
   )
 }
