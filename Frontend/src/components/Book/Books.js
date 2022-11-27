@@ -20,11 +20,14 @@ export default function Books() {
 
   return (
     <div>
+    <center><h1>Available Books</h1></center>
+    <ul className='ulbook'>
       {books && books.map((book,i) => (
         <div key={i}>
           <Book book={book}/>
         </div>
       ))}
-    </div>
+    </ul>
+  </div>
   )
 }

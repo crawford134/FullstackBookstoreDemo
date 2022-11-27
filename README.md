@@ -7,6 +7,8 @@ Uses Mongodb, NodeJs, ExpressJs, and ReactJs
 - Backend: Uses the following Libraries: 
     1. Nodemon is used as a tool to help develop the NodeJs applications by automatically restarting the application anytime there are changes in the directory
     2. Mongoose is an object data-modelling model used for both NodeJs and the MongoDB. It manages the relationships between data, provides a schema validation, and it is used to translate between objects in the code and their respective representations in MongoDB  
+- Backend: Accesses Cluster0 -> Books Collection 
+
 - Frontend: ReactJs is used for building a fast and scalable User Interface (helps render the graphical interface on the screen)
 - Frontend: Material UI is used for styling the ReactJs Components 
 - Frontend: Uses the following Libraries: 

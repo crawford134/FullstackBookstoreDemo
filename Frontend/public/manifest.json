@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bookstore Demo",
+  "name": "Bookstore Demo",
   "icons": [
     {
       "src": "logo1.ico",
