@@ -19,6 +19,8 @@ export default function Books() {
   //console.log("Books",books)
 
   return (
+    <div>
+    <center><h1>Available Books</h1></center>
     <ul className='ulbook'>
       {books && books.map((book,i) => (
         <div key={i}>
@@ -26,5 +28,6 @@ export default function Books() {
         </div>
       ))}
     </ul>
+  </div>
   )
 }

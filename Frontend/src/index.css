@@ -82,3 +82,20 @@
 .cardbutton{
     flex-direction: row;
 }
+
+.addbook{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.addform{
+    background-color: rgb(238, 238, 238);
+    box-shadow: 5px 5px 10px #717171; /* Across, Down, Blur, Colour */
+    border-radius: 5px;
+    max-width: 300px;
+    padding: 15px;
+}
