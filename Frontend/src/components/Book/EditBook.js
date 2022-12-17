@@ -5,6 +5,6 @@ const URL = 'http://localhost:5001/books'
 export default function EditBook() {
   console.log("EditBook URL: ",URL)
   return (
-    <div>EditBook</div>
+    <div><h1>Edit Book</h1></div>
   )
 }

@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FormControlLabel, Checkbox, FormLabel, TextField, Button } from '@mui/material'
 
 const URL = 'http://localhost:5001/books'
 
 export default function AddBook() {
   console.log("AddBook URL: ",URL)
+  const [inputs, setInputs] = useState({
+    title:'',
+    description:'',
+    author:'',
+    available:false, 
+    image:'',
+    ISBN:100000000,
+    price:0,
+  })
+
   return (
     <div className='addbook'>
-      <div class="Add-wrapper">
-        <div class="Add-typing">
-          Add Book
-        </div>
-      </div>
+      <h1>Add Book</h1>
       <form className='addform'>
           <FormLabel>Available</FormLabel>
           <br />
